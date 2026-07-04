@@ -20,6 +20,7 @@ accordingly
   <url>http://YourGitHubUserInLowerCase.github.io/JoyOfCodingSummer2026</url>
   <modules>
     <module>FizzBuzz</module>
+    <module>LeapYear</module>
   </modules>
   <inceptionYear>2026</inceptionYear>
   <organization>
