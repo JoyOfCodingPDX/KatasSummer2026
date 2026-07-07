@@ -56,9 +56,27 @@ public class FizzBuzzTest
   }
 
   @Test
-  void fizzBuzzOf6Is6() {
+  void fizzBuzzOf7Is7() {
+    int number = 7;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("7"));
+  }
+
+  @Test
+  void fizzBuzzOf6IsFizz() {
     int number = 6;
-    assertThat(FizzBuzz.fizzBuzz(number), equalTo("6"));
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("Fizz"));
+  }
+
+  @Test
+  void fizzBuzzOf10IsBuzz() {
+    int number = 10;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("Buzz"));
+  }
+
+  @Test
+  void fizzBuzzOf15IsBuzz() {
+    int number = 15;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("FizzBuzz"));
   }
 
 }

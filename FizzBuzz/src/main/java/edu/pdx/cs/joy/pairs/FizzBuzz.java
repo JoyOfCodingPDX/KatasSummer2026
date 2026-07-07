@@ -24,10 +24,13 @@ public class FizzBuzz {
   }
 
   public static String fizzBuzz(int number) {
-    if (number == 3) {
+    if (isDivisibleBy3(number) && isDivisibleBy5(number)) {
+      return "FizzBuzz";
+
+    } else if (isDivisibleBy3(number)) {
       return "Fizz";
 
-    } else if (number == 5) {
+    } else if (isDivisibleBy5(number)) {
       return "Buzz";
 
     } else {
