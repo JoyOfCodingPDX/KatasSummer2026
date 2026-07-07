@@ -19,6 +19,51 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <developers>
+    <developer>
+      <name>David Whitlock</name>
+      <roles>
+        <role>facilitator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Student Name</name>
+      <roles>
+        <role>Driver or Navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Student Name</name>
+      <roles>
+        <role>driver or navigator</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Student Name</name>
+      <roles>
+        <role>driver or navigator</role>
+      </roles>
+    </developer>
+  </developers>
+
   <build>
     <plugins>
       <plugin>
