@@ -14,4 +14,8 @@ public class FizzBuzz {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static boolean isDivisibleBy5(int number) {
+    return number % 5 == 0;
+  }
 }
