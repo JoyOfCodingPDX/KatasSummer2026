@@ -11,7 +11,25 @@ class FizzBuzzIT extends InvokeMainTestCase {
   @Test
   void invokingMainWithNoArgumentsPrintsMissingArgumentsToStandardError() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(FizzBuzz.class);
-    assertThat(result.getTextWrittenToStandardError(), containsString("Missing command line arguments"));
+    String output = result.getTextWrittenToStandardOut();
+    assertThat(output, containsString("""
+      1
+      2
+      Fizz
+      4
+      Buzz
+      Fizz
+      7
+      8
+      Fizz
+      Buzz
+      11
+      Fizz
+      13
+      14
+      FizzBuzz
+      16
+      """));
   }
 
 
