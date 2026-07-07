@@ -18,4 +18,12 @@ public class FizzBuzz {
   public static boolean isDivisibleBy5(int number) {
     return number % 5 == 0;
   }
+
+  public static boolean isDivisibleBy3(int number) {
+    return number % 3 == 0;
+  }
+
+  public static String fizzBuzz(int number) {
+    return "Fizz";
+  }
 }

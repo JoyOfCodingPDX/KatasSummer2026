@@ -25,4 +25,22 @@ public class FizzBuzzTest
     assertThat(FizzBuzz.isDivisibleBy5(number), equalTo(false));
   }
 
+  @Test
+  void isDivisibleBy3() {
+    int number = 3;
+    assertThat(FizzBuzz.isDivisibleBy3(number), equalTo(true));
+  }
+
+  @Test
+  void isNotDivisibleBy3() {
+    int number = 4;
+    assertThat(FizzBuzz.isDivisibleBy3(number), equalTo(false));
+  }
+
+  @Test
+  void fizzBuzzOf3IsFizz() {
+    int number = 3;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("Fizz"));
+  }
+
 }
