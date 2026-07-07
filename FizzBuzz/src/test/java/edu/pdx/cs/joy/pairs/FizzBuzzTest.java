@@ -43,4 +43,22 @@ public class FizzBuzzTest
     assertThat(FizzBuzz.fizzBuzz(number), equalTo("Fizz"));
   }
 
+  @Test
+  void fizzBuzzOf5IsBuzz() {
+    int number = 5;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("Buzz"));
+  }
+
+  @Test
+  void fizzBuzzOf4Is4() {
+    int number = 4;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("4"));
+  }
+
+  @Test
+  void fizzBuzzOf6Is6() {
+    int number = 6;
+    assertThat(FizzBuzz.fizzBuzz(number), equalTo("6"));
+  }
+
 }

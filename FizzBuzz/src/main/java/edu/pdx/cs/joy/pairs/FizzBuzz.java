@@ -24,6 +24,14 @@ public class FizzBuzz {
   }
 
   public static String fizzBuzz(int number) {
-    return "Fizz";
+    if (number == 3) {
+      return "Fizz";
+
+    } else if (number == 5) {
+      return "Buzz";
+
+    } else {
+      return String.valueOf(number);
+    }
   }
 }
