@@ -14,4 +14,8 @@ public class LeapYears {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public static boolean isDivisibleBy400(int number) {
+    return number % 400 == 0;
+  }
 }
