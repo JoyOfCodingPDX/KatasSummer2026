@@ -18,4 +18,8 @@ public class LeapYears {
   public static boolean isDivisibleBy400(int number) {
     return number % 400 == 0;
   }
+
+  public static boolean isDivisibleBy4Not100(int number) {
+    return (number % 4 == 0) && (number % 100 != 0); 
+  }
 }

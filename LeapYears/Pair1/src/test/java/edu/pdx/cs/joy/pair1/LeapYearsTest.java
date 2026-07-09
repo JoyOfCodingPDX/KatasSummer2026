@@ -19,4 +19,22 @@ public class LeapYearsTest
     assertThat(LeapYears.isDivisibleBy400(year), equalTo(true));
   }
 
+  @Test
+  void isNotDivisibleBy400() {
+    int year = 320;
+     assertThat(LeapYears.isDivisibleBy400(year), equalTo(false));
+  }
+
+  @Test
+  void isDivisibleBy4Not100() {
+    int year = 16; 
+    assertThat(LeapYears.isDivisibleBy4Not100(year), equalTo(true));
+  }
+
+  @Test
+  void isDivisibleBy4And100() {
+    int year = 400;
+    assertThat(LeapYears.isDivisibleBy4Not100(year), equalTo(false));
+  }
+
 }
