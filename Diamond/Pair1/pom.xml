@@ -11,8 +11,8 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
-  <description>A simple project for getting started with code Pair1s</description>
+  <name>Diamond Kata Pair 1</name>
+  <description>Diamond Kata</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
@@ -37,7 +37,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pair1.Kata</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair1.Diamond</mainClass>
             </manifest>
           </archive>
         </configuration>
