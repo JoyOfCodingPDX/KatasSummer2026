@@ -10,6 +10,19 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class LeapYears {
 
+  Integer inputLeapYear = 0;
+
+  public static Integer transformInput(String input)
+  {
+    Integer I = input.
+
+  }
+
+  public static void isLeapYear()
+  {
+
+  }
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
