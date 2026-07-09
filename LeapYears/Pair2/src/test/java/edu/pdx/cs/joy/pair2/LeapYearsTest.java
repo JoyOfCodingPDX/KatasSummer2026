@@ -48,7 +48,18 @@ public class LeapYearsTest
     assertThat(LeapYears.isLeapYear(input), equalTo(false));
   }
 
+  @Test
+  void negativesAreValid ()
+  {
+    String input = "-400";
+    assertThat(LeapYears.isLeapYear(input), equalTo(true));
+  }
 
-
+  @Test
+  void stringNotNumberNotValid ()
+  {
+    String input = "invalid input";
+    assertThat(LeapYears.isLeapYear(input), equalTo(false));
+  }
 
 }
