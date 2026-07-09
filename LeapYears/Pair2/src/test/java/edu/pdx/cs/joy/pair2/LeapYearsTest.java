@@ -10,4 +10,11 @@ public class LeapYearsTest
     new LeapYears();
   }
 
+  @Test
+  void isInputANumber() {
+    String input = "2";
+    Integer intInput = Integer.valueOf(input);
+    assert(intInput.equals(2));
+  }
+
 }
