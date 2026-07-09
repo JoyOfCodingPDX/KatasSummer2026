@@ -6,13 +6,13 @@
     <groupId>io.github.davidwhitlock.joy</groupId>
     <version>1.3.0</version>
   </parent>
-  <groupId>edu.pdx.cs.joy.pairs</groupId>
-  <artifactId>FizzBuzz</artifactId>
+  <groupId>edu.pdx.cs.joy.pair3</groupId>
+  <artifactId>Pair3</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>FizzBuzz</name>
-  <description>A simple project for getting started with code FizzBuzzs</description>
+  <name>Leap Years Pair 3</name>
+  <description>A simple project for getting started with code LeapYears</description>
   <url>http://www.cs.pdx.edu</url>
 
   <properties>
@@ -21,46 +21,10 @@
 
   <developers>
     <developer>
-      <name>David Whitlock</name>
-      <roles>
-        <role>facilitator</role>
-      </roles>
+      <name>Student Name</name>
     </developer>
     <developer>
       <name>Student Name</name>
-      <roles>
-        <role>Adam Marion: Navigator</role>
-      </roles>
-    </developer>
-    <developer>
-      <name>Student Name</name>
-      <roles>
-        <role>Driver or Navigator</role>
-      </roles>
-    </developer>
-    <developer>
-      <name>Student Name</name>
-      <roles>
-        <role>Driver or Navigator</role>
-      </roles>
-    </developer>
-    <developer>
-      <name>Student Name</name>
-      <roles>
-        <role>Driver or Navigator</role>
-      </roles>
-    </developer>
-    <developer>
-      <name>Sid A</name>
-      <roles>
-        <role>navigator</role>
-      </roles>
-    </developer>
-    <developer>
-      <name>Trevor</name>
-      <roles>
-        <role>navigator</role>
-      </roles>
     </developer>
   </developers>
 
@@ -73,7 +37,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs.joy.pairs.FizzBuzz</mainClass>
+              <mainClass>edu.pdx.cs.joy.pair3.LeapYears</mainClass>
             </manifest>
           </archive>
         </configuration>
