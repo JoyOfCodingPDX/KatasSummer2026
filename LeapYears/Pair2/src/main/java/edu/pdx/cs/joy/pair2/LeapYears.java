@@ -14,13 +14,16 @@ public class LeapYears {
 
   public static Integer transformInput(String input)
   {
-    Integer I = input.
-
+    return Integer.valueOf(input);
   }
 
-  public static void isLeapYear()
+  public static boolean isLeapYear(String input)
   {
-
+    Integer year = transformInput(input);
+    if(year % 400 == 0) return true;
+    else if (year % 100 == 0) return false;
+    else if (year % 4 == 0) return true;
+    else return false;
   }
 
   @VisibleForTesting
