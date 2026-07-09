@@ -88,7 +88,7 @@
     <dependency>
       <groupId>io.github.davidwhitlock.joy</groupId>
       <artifactId>projects</artifactId> <!-- For the InvokeMainTest class -->
-      <version>3.0.4</version>
+      <version>3.0.5</version>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
