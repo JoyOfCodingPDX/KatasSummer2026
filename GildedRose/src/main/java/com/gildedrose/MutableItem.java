@@ -10,6 +10,8 @@ public class MutableItem extends Item {
   }
 
   public void increaseQuality() {
-    this.quality = this.quality + 1;
+    if (this.quality < 50) {
+      this.quality = this.quality + 1;
+    }
   }
 }
