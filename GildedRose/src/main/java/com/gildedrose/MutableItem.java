@@ -8,4 +8,8 @@ public class MutableItem extends Item {
   public void degradeQuality() {
     this.quality = this.quality - 1;
   }
+
+  public void increaseQuality() {
+    this.quality = this.quality + 1;
+  }
 }
