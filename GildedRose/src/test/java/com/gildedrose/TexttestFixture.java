@@ -8,8 +8,8 @@ public class TexttestFixture {
                 new MutableItem("+5 Dexterity Vest", 10, 20), //
                 new MutableItem("Aged Brie", 2, 0), //
                 new MutableItem("Elixir of the Mongoose", 5, 7), //
-                new MutableItem("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new MutableItem("Sulfuras, Hand of Ragnaros", -1, 80),
+                new Sulfuras(0, 80), //
+                new Sulfuras(-1, 80),
                 new MutableItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
                 new MutableItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new MutableItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
