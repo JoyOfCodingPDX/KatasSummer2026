@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import static com.gildedrose.GildedRose.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
@@ -16,8 +15,8 @@ class GildedRoseTest {
     }
 
     private static @NonNull Item updateQuality(String name, int sellIn, int quality, int numberOfDays) {
-        Item item = new Item(name, sellIn, quality);
-        Item[] items = new Item[] {item};
+        MutableItem item = new MutableItem(name, sellIn, quality);
+        MutableItem[] items = new MutableItem[] {item};
         GildedRose app = new GildedRose(items);
         for (int i = 0; i < numberOfDays; i++) {
             app.updateQuality();
