@@ -40,4 +40,12 @@ class GildedRoseTest {
         assertThat(item.sellIn, equalTo(1));
         assertThat(item.quality, equalTo(1));
     }
+
+
+    @Test
+    void maximumQualityOfAgedBrieIs50() {
+        Item item = updateQuality("Aged Brie", 2, 50);
+        assertThat(item.sellIn, equalTo(1));
+        assertThat(item.quality, equalTo(50));
+    }
 }
