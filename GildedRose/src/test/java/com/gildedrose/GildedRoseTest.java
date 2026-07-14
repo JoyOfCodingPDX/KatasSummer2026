@@ -14,8 +14,16 @@ class GildedRoseTest {
         return updateQuality(name, sellIn, quality, 1);
     }
 
+    private Item updateQuality(Sulfuras sulfuras) {
+        return updateQuality(sulfuras, 1);
+    }
+
     private static @NonNull Item updateQuality(String name, int sellIn, int quality, int numberOfDays) {
         MutableItem item = new MutableItem(name, sellIn, quality);
+        return updateQuality(item, numberOfDays);
+    }
+
+    private static MutableItem updateQuality(MutableItem item, int numberOfDays) {
         MutableItem[] items = new MutableItem[] {item};
         GildedRose app = new GildedRose(items);
         for (int i = 0; i < numberOfDays; i++) {
@@ -99,7 +107,7 @@ class GildedRoseTest {
 
     @Test
     void qualityOfSulfurasNeverChanges() {
-        Item item = updateQuality(SULFURAS, 0, 80);
+        Item item = updateQuality(new Sulfuras(0, 80));
         assertThat(item.sellIn, equalTo(0));
         assertThat(item.quality, equalTo(80));
     }
