@@ -12,14 +12,7 @@ class GildedRose {
 
     public void updateQuality() {
       for (MutableItem item : items) {
-        if (!item.name.equals(AGED_BRIE)
-          && !item.name.equals(BACKSTAGE_PASS)) {
-          if (item.quality > 0) {
-            if (!item.name.equals(SULFURAS)) {
-              item.degradeQuality();
-            }
-          }
-        } else {
+        if (item.name.equals(AGED_BRIE) || item.name.equals(BACKSTAGE_PASS)) {
           if (item.quality < 50) {
             item.increaseQuality();
 
@@ -35,6 +28,12 @@ class GildedRose {
                   item.increaseQuality();
                 }
               }
+            }
+          }
+        } else {
+          if (item.quality > 0) {
+            if (!item.name.equals(SULFURAS)) {
+              item.degradeQuality();
             }
           }
         }
