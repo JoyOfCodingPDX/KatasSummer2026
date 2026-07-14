@@ -4,20 +4,12 @@ import org.jspecify.annotations.NonNull;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import static com.gildedrose.GildedRose.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
-
-    @Disabled // This needs to be fixed
-    @Test
-    void foo() {
-        Item[] items = new Item[] { new Item("foo", 0, 0) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals("fixme", app.items[0].name);
-    }
 
     private static @NonNull Item updateQuality(String name, int sellIn, int quality) {
         return updateQuality(name, sellIn, quality, 1);
@@ -42,7 +34,7 @@ class GildedRoseTest {
 
     @Test
     void agedBrieQualityIncreasesAtEndOfDay() {
-        Item item = updateQuality("Aged Brie", 2, 0);
+        Item item = updateQuality(AGED_BRIE, 2, 0);
         assertThat(item.sellIn, equalTo(1));
         assertThat(item.quality, equalTo(1));
     }
@@ -50,7 +42,7 @@ class GildedRoseTest {
 
     @Test
     void maximumQualityOfAgedBrieIs50() {
-        Item item = updateQuality("Aged Brie", 2, 50);
+        Item item = updateQuality(AGED_BRIE, 2, 50);
         assertThat(item.sellIn, equalTo(1));
         assertThat(item.quality, equalTo(50));
     }
@@ -65,7 +57,7 @@ class GildedRoseTest {
 
     @Test
     void qualityOfBackstagePassesIs0AfterSellInDate() {
-        Item item = updateQuality("Backstage passes to a TAFKAL80ETC concert", 0, 57);
+        Item item = updateQuality(BACKSTAGE_PASS, 0, 57);
         assertThat(item.sellIn, equalTo(-1));
         assertThat(item.quality, equalTo(0));
     }
@@ -80,35 +72,35 @@ class GildedRoseTest {
 
     @Test
     void qualityOfBackstagePassIncreasesBy1MoreThan10DaysBeforeSellInDate() {
-        Item item = updateQuality("Backstage passes to a TAFKAL80ETC concert", 17, 20, 7);
+        Item item = updateQuality(BACKSTAGE_PASS, 17, 20, 7);
         assertThat(item.sellIn, equalTo(10));
         assertThat(item.quality, equalTo(27));
     }
 
     @Test
     void qualityOfBackstagePassIncreasesBy2Between10And5DaysBeforeSellInDate() {
-        Item item = updateQuality("Backstage passes to a TAFKAL80ETC concert", 10, 20, 5);
+        Item item = updateQuality(BACKSTAGE_PASS, 10, 20, 5);
         assertThat(item.sellIn, equalTo(5));
         assertThat(item.quality, equalTo(30));
     }
 
     @Test
     void qualityOfBackstagePassIncreasesBy3DuringThe5DaysBeforeSellInDate() {
-        Item item = updateQuality("Backstage passes to a TAFKAL80ETC concert", 5, 20, 5);
+        Item item = updateQuality(BACKSTAGE_PASS, 5, 20, 5);
         assertThat(item.sellIn, equalTo(0));
         assertThat(item.quality, equalTo(35));
     }
 
     @Test
     void qualityOfBackstagePassStays0AfterSellInDate() {
-        Item item = updateQuality("Backstage passes to a TAFKAL80ETC concert", -1, 0);
+        Item item = updateQuality(BACKSTAGE_PASS, -1, 0);
         assertThat(item.sellIn, equalTo(-2));
         assertThat(item.quality, equalTo(0));
     }
 
     @Test
     void qualityOfSulfurasNeverChanges() {
-        Item item = updateQuality("Sulfuras, Hand of Ragnaros", 0, 80);
+        Item item = updateQuality(SULFURAS, 0, 80);
         assertThat(item.sellIn, equalTo(0));
         assertThat(item.quality, equalTo(80));
     }
