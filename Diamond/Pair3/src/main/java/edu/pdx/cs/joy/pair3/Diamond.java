@@ -12,6 +12,19 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    int fromA = (int)'C' - (int)'A';
+
+    for (int i = 65; i <= fromA + 65; i++) {
+      for (int j = fromA +1 ; j <= 0; j-- ) {
+        System.out.print(" ");
+      }
+      char letter = (char)i;
+      System.out.println(letter);
+    }
   }
 }
+
+// +++A
+//   B B
+//  C   C
+// D     D
