@@ -15,19 +15,11 @@ public class LeapYears {
     System.err.println("Missing command line arguments");
   }
 
-  public static boolean isDivisibleBy400(int number){
-    return  number % 400 == 0;
+  public static boolean isDivisibleBy400(int number) {
+    return number % 400 == 0;
   }
-public static  boolean isDivisibleBy100Not400(int numbers){
-    //if((numbers % 100) == 0 && (numbers % 400 != 0)){
-   if((numbers % 100) == 0 && !isDivisibleBy400(numbers)){
 
-    return true;
-    }
-    else
-      return  false;
-}
-public static  boolean isLeap(int years){
-    return  years % 4 == 0;
-}
+  public static boolean isDivisibleBy4Not100(int number) {
+    return (number % 4 == 0) && (number % 100 != 0); 
+  }
 }
