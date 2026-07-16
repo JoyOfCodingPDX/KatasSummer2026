@@ -24,8 +24,8 @@ public class DiamondTest
   @Test
   void isLetterB(){
     String letter = "B";
-    String diamond = "A\n" + " B B" + "A";
-    assertThat(letter, equalTo("A\n" + " B B" + "A"));
+    String diamond = "A\n  B B\n  A";
+    assertThat(diamond, equalTo("A\n  B B\n  A"));
 
   }
 
