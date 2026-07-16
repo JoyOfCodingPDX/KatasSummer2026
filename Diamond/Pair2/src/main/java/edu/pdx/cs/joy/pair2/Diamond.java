@@ -21,18 +21,25 @@ public class Diamond {
 
     String [] alphabet = letters.split(" ");
 
-    if (letter.equals("A")) {
-      System.out.println("A");
+    if (alphabet.equals("A")) {
+      System.out.println("    A");
     }
-    else if (letter.equals("B")) {
+    else if (alphabet.equals("B")) {
       System.out.println("A");
       System.out.println("B B");
       System.out.println("A");
     }
     else {
       for(int i = 0; i < alphabet.length; i++) {
-          System.out.println(alphabet[i] + "\n");
-          System.out.println(alphabet[0]);
+        if(i == 0 )
+        {
+        System.out.println(" " + alphabet[i]);
+
+          //System.out.println(alphabet[i]);
+      }else if(i == 1)
+        {
+          System.out.println(alphabet[i] + " " + alphabet[i]+ '\n');
+        }
       }
       
     }
