@@ -17,11 +17,9 @@ public class Diamond {
     String letterB = "B";
     String letter = "C";
 
-
-
     String letters = "A B C D E";
 
-    String [] alphabet = letters.
+    String [] alphabet = letters.split(" ");
 
     if (letter.equals("A")) {
       System.out.println("A");
@@ -32,7 +30,10 @@ public class Diamond {
       System.out.println("A");
     }
     else {
-      for(int i = 0 ; )
+      for(int i = 0; i < alphabet.length; i++) {
+          System.out.println(alphabet[i] + "\n");
+          System.out.println(alphabet[0]);
+      }
       
     }
 
