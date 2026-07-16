@@ -13,13 +13,7 @@ public class DiamondPrinterTest {
     @Test
     void printsTheLetterBDiamond() {
         DiamondPrinter testSetup = new DiamondPrinter("B");
-
-
-    }
-
-    @Test
-    void printsTheLetterBDiamond() {
-        DiamondPrinter testSetup = new DiamondPrinter("B");
+        assertEquals(testSetup.toString(), " A \nB B\n A ");
     }
 
 }
