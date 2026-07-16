@@ -12,7 +12,23 @@ public class Diamond {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    // System.err.println("Missing command line arguments");
+    String letterA = "A";
+    String letterB = "B";
+    String letter = "C";
+
+    if (letter.equals("A")) {
+      System.out.println("A");
+    }
+    else if (letter.equals("B")) {
+      System.out.println("A");
+      System.out.println("B B");
+      System.out.println("A");
+    }
+    else {
+      
+    }
+
   }
 
 
