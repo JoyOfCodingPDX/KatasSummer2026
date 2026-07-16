@@ -11,4 +11,9 @@ public class DiamondPrinterTest {
         assertEquals(testSetup.toString() , "A");
     }
 
+    @Test
+    void printsTheLetterBDiamond() {
+        DiamondPrinter testSetup = new DiamondPrinter("B");
+    }
+
 }
