@@ -9,5 +9,5 @@ public class DiamondTest
   void canInstantiateDiamondClass() {
     new Diamond();
   }
-
+  
 }
