@@ -17,15 +17,30 @@ public class Diamond {
     String letterB = "B";
     String letter = "C";
 
-    if (letter.equals("A")) {
-      System.out.println("A");
+    String letters = "A B C D E";
+
+    String [] alphabet = letters.split(" ");
+
+    if (alphabet.equals("A")) {
+      System.out.println("    A");
     }
-    else if (letter.equals("B")) {
+    else if (alphabet.equals("B")) {
       System.out.println("A");
       System.out.println("B B");
       System.out.println("A");
     }
     else {
+      for(int i = 0; i < alphabet.length; i++) {
+        if(i == 0 )
+        {
+        System.out.println(" " + alphabet[i]);
+
+          //System.out.println(alphabet[i]);
+      }else if(i == 1)
+        {
+          System.out.println(alphabet[i] + " " + alphabet[i]+ '\n');
+        }
+      }
       
     }
 
