@@ -17,6 +17,12 @@ public class Diamond {
     String letterB = "B";
     String letter = "C";
 
+
+
+    String letters = "A B C D E";
+
+    String [] alphabet = letters.
+
     if (letter.equals("A")) {
       System.out.println("A");
     }
@@ -26,6 +32,7 @@ public class Diamond {
       System.out.println("A");
     }
     else {
+      for(int i = 0 ; )
       
     }
 
