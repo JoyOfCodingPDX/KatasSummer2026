@@ -13,9 +13,6 @@ public class DiamondTest
     new Diamond();
   }
 
-
-
-
   @Test
   void isLetterA(){
     String letter = "A";
@@ -27,8 +24,8 @@ public class DiamondTest
   @Test
   void isLetterB(){
     String letter = "B";
-    String diamond = "";
-    assertThat(letter,equalTo("B"));
+    String diamond = "A\n" + " B B" + "A";
+    assertThat(letter, equalTo("A\n" + " B B" + "A"));
 
   }
 
