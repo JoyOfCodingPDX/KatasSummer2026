@@ -43,6 +43,14 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>${exec-maven-plugin.version}</version>
+        <configuration>
+          <mainClass>edu.pdx.cs.joy.pair3.Diamond</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
         <version>${maven-shade-plugin.version}</version>
@@ -55,10 +63,35 @@
           </execution>
         </executions>
       </plugin>
+      <!-- Work around a VS Code (m2e) bug: the parent's compile-integration-test
+           execution's testIncludes get applied as a filter on src/test/java,
+           hiding all *Test.java files from the IDE. Adding *Test.java to the
+           includes makes the IDE see the unit tests; the CLI build is unaffected.
+           Must be declared AFTER build-helper-maven-plugin so add-it-source runs
+           before compile-integration-test in the pre-integration-test phase. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>compile-integration-test</id>
+            <configuration>
+              <testIncludes>
+                <testInclude>**/*IT.java</testInclude>
+                <testInclude>**/*TestSuite.java</testInclude>
+                <testInclude>**/*Test.java</testInclude>
+              </testIncludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>${surefire.version}</version>
+        <configuration>
+          <failIfNoTests>false</failIfNoTests>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
