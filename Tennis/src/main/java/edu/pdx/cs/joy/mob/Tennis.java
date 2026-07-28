@@ -14,4 +14,11 @@ public class Tennis {
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public class GameScore {
+    enum PlayerScore {LOVE}
+    PlayerScore player1;
+    PlayerScore player2;
+    
+  }
 }
