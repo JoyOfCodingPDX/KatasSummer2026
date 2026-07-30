@@ -17,11 +17,25 @@ public class RPNCalculator {
       System.err.print("Missing command line arguments");
     }
 
+    int result = 0
     String[] tokens = args[0].split(" ");
     for (int i = 0; i < tokens.length; i++) {
       String token = tokens[i];
       if (token.matches("[+*-/\\d]")) {
+        switch (tokens[i]) {
+          case "/":
+            result = result + calculateResult(0,0, token);
+            break;
 
+          /*case "+":
+            break;
+          case "-":
+            break;
+          case */
+
+
+        }
+            
       } else {
         System.err.println("Invalid character: " + token);
       }
@@ -30,6 +44,13 @@ public class RPNCalculator {
     System.out.print("0");
   }
 
+  private static int calculateResult( int a, int b, String operator) {
+    switch (operator) {
+      case "/":
+        return a/b;
+    }
 
+    throw new IllegalStateException("Incorrect argument types.");
+  }
 
 }
