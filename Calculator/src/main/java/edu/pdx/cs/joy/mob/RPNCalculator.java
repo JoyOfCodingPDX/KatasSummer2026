@@ -17,6 +17,16 @@ public class RPNCalculator {
       System.err.print("Missing command line arguments");
     }
 
+    String[] tokens = args[0].split(" ");
+    for (int i = 0; i < tokens.length; i++) {
+      String token = tokens[i];
+      if (token.matches("[+*-/\\d]")) {
+
+      } else {
+        System.err.println("Invalid character: " + token);
+      }
+    }
+
     System.out.print("0");
   }
 

@@ -28,11 +28,18 @@ class RPNCalculatorIT extends InvokeMainTestCase {
 
   }
 
-//  @Test
-//  void inputIsLetter() {
-//    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "a");
-//    assertThat(result.getTextWrittenToStandardError(), containsString("Input is a letter"));
-//  }
+  @Test
+  void invokingMainWithValidArgumentList() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "20 5 /");
+    String output = result.getTextWrittenToStandardOut();
+    assertThat(output, equalTo("4"));
+  }
+
+  @Test
+  void inputIsLetter() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "a");
+    assertThat(result.getTextWrittenToStandardError(), containsString("Invalid character: a"));
+  }
 
 
 
