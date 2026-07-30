@@ -41,6 +41,11 @@ class RPNCalculatorIT extends InvokeMainTestCase {
     assertThat(result.getTextWrittenToStandardError(), containsString("Invalid character: a"));
   }
 
-
+  @Test
+  void invokingMainWithValid() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "3 5 8 * 7 + *");
+    String output = result.getTextWrittenToStandardOut();
+    assertThat(output, equalTo("141"));
+  }
 
 }
