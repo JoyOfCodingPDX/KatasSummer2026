@@ -28,4 +28,12 @@ class RPNCalculatorIT extends InvokeMainTestCase {
 
   }
 
+//  @Test
+//  void inputIsLetter() {
+//    InvokeMainTestCase.MainMethodResult result = invokeMain(RPNCalculator.class, "a");
+//    assertThat(result.getTextWrittenToStandardError(), containsString("Input is a letter"));
+//  }
+
+
+
 }

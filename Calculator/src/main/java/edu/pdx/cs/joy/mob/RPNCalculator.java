@@ -1,6 +1,7 @@
 package edu.pdx.cs.joy.mob;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.sun.jdi.connect.Connector;
 
 /**
  * A class for getting started with a code kata
@@ -12,7 +13,11 @@ public class RPNCalculator {
 
   @VisibleForTesting
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    if( args.length == 0 ) {
+      System.err.print("Missing command line arguments");
+    }
+
+    System.out.print("0");
   }
 
 
