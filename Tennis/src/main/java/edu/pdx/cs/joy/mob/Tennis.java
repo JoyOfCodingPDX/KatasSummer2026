@@ -10,8 +10,30 @@ import com.google.common.annotations.VisibleForTesting;
  */
 public class Tennis {
 
+  private GameScore score = new GameScore();
+
+
   @VisibleForTesting
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
   }
+
+  public GameScore getScore() {
+   return this.score;
+  }
+
+  public class GameScore {
+    enum PlayerScore {LOVE}
+    PlayerScore player1 = PlayerScore.LOVE;
+    PlayerScore player2 = PlayerScore.LOVE;
+
+
+    public PlayerScore getPlayerOneScore() {
+      return this.player1;
+    }
+    public PlayerScore getPlayerTwoScore() {
+      return this.player2;
+    }
+  }
+
 }
