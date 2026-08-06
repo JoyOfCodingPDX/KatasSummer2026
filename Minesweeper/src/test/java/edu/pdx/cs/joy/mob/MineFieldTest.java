@@ -20,4 +20,12 @@ public class MineFieldTest {
         assertThat(new int[2][2], equalTo(field.getMineField()));
     }
 
+    @Test
+    void minefiledIngestsAListofStrings() {
+        MineField field = new MineField(2,2);
+        String [] listOfMines  = new String [] {"..","*."};
+        field.findMines(listOfMines);
+        assertThat(new int [][] {{0,0},{1,0}}, equalTo(field.getMineField()));
+    }
+
 }
