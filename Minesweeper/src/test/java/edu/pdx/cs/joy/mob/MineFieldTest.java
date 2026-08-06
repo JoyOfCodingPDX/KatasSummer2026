@@ -28,4 +28,16 @@ public class MineFieldTest {
         assertThat(new int [][] {{0,0},{1,0}}, equalTo(field.getMineField()));
     }
 
+    @Test
+    void checkifArrayisOne()
+    {
+        MineField field = new MineField(1,1);
+        String [] listOfMines  = new String [] {"."};
+        field.findMines(listOfMines);
+        assertThat(new int [][] {{0}}, equalTo(field.getMineField()));
+    }
+
+
+
+
 }

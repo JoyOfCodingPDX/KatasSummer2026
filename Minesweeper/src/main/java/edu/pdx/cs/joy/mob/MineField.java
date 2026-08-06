@@ -21,10 +21,10 @@ public class MineField {
 
     public void findMines(String [] input) {
         //"*."
-        for (int i=0; i<input.size(); i++) {
-            String input_string = intput[i];
-            for (int j = 0; j < input[i].size(); j++) {
-                if (intput_string.charAt(j)=='*') {
+        for (int i=0; i<input.length; i++) {
+            String input_string = input[i];
+            for (int j = 0; j < input[i].length(); j++) {
+                if (input[i].charAt(j)=='*') {
                     this.grid[i][j] = 1;
                 }
             }
